@@ -1,0 +1,392 @@
+/* Your CSS here */
+
+@-webkit-keyframes pulse {
+   
+    0%{ -webkit-transform: scale3d(0,0,0) rotate3d(0,0,0,0deg);}
+80%{ -webkit-transform: scale3d(1.3,1.3,0) rotate3d(0,0,0,320deg);}
+100%{ -webkit-transform: scale3d(1,1,0) rotate3d(0,0,0,0deg);}
+   
+}
+
+@-webkit-keyframes popUp {
+   
+    0%{ -webkit-transform: scale3d(0,0,0)}
+80%{ -webkit-transform: scale3d(1.7,1.7,1.7)}
+100%{ -webkit-transform: scale3d(1,1,0)}
+   
+}
+
+.popItUp {
+	-webkit-animation: popUp .5s ease-in;
+}
+
+.popIt {
+	-webkit-animation: pulse 1s ease-in;
+}
+
+.msgBoxInp1 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/p1roundmsg.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+.msgBoxInp2 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/p2roundmsg.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.msgBoxInGamep1 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/p1gamemsg.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+.msgBoxInGamep2 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/p2gamemsg.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.msgBoxGameOverp1 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/gameoverp1.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.msgBoxGameOverp2 {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/gameoverp2.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.msgBoxGameOverTouchpad {
+	position: relative;
+	top: -150px;
+	left: -50px;
+	background: url(../images/gameovertouchpad.png) 0 0 no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.iconImage {
+	width:30px;
+	height:30px;
+}
+
+.myImageDime {
+	position:absolute;
+	width: 70px;
+	height: 68px;
+	top: 300px;
+	left: 400px;
+	z-index: 9000;
+}
+
+.myImagePenny {
+	position:absolute;
+	width: 92px;
+	height: 85px;
+	top: 300px;
+	left: 400px;
+	z-index: 9000;
+}
+
+.flipImage {
+	width:32px;
+	height:32px;
+	background: url(../images/flipwon.png) 0 0 no-repeat;
+	
+    
+}
+
+.flipImageLost {
+	width:32px;
+	height:32px;
+	background: url(../images/fliplose.png) 0 0 no-repeat;
+	
+    
+}
+
+.flipImageoffp11 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp11.png) 0 0 no-repeat;
+	
+}
+
+.flipImageoffp12 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp12.png) 0 0 no-repeat;
+	
+}
+.flipImageoffp13 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp13.png) 0 0 no-repeat;
+	
+}
+
+.flipImageoffp21 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp21.png) 0 0 no-repeat;
+	
+}
+
+.flipImageoffp22 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp22.png) 0 0 no-repeat;
+	
+}
+
+.flipImageoffp23 {
+	width:32px;
+	height:32px;
+	background: url(../images/emptyflipp23.png) 0 0 no-repeat;
+	
+}
+
+.roundImage1 {
+	width:41px;
+	height:32px;
+	background: url(../images/player1roundwin.png) 0 0 no-repeat;
+	
+    
+}
+
+.roundImage1off {
+	width:41px;
+	height:32px;
+	background: url(../images/player1roundlose.png) 0 0 no-repeat;
+	
+}
+
+.roundImage2 {
+	width:41px;
+	height:32px;
+	background: url(../images/player2roundwin.png) 0 0 no-repeat;
+	
+    
+}
+
+.roundImage2off {
+	width:41px;
+	height:32px;
+	background: url(../images/player2roundlose.png) 0 0 no-repeat;
+	
+}
+
+.myImageQuarter {
+	position:absolute;
+	width: 100px;
+	height: 100px;
+	top: 300px;
+	left: 400px;
+	z-index: 9000;
+}
+
+.player1 {
+	position:absolute;
+	width: 600px;
+	height: 125px;
+	font-weight:bold;
+	top:35px;
+	left:60px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(90deg);
+	/*opacity: .75;
+	background:#9CC2CF;*/
+}
+
+.enyo-popup {
+	background:#9CC2CF;
+}
+
+.player2 {
+	position:absolute;
+	font-weight:bold;
+	width: 600px;
+	height: 125px;
+	top:640px;
+	left:960px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(-90deg);
+}
+
+.roundPop {
+	position:absolute;
+	width: 600px;
+	height: 150px;
+	top:620px;
+	left:222px;
+	opacity: .75;
+	
+	border-radius: 20px;
+}
+
+
+
+.settingsPop {
+	position:absolute;
+	width: 1000px;
+	height: 100px;
+	top:0;
+	left:12px;
+	opacity: .75;
+	font-weight: bold;
+	
+	border-radius: 20px;
+}
+
+.msgPopPlayer1ChoiceOpen {
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 500px;
+	height: 80px;
+	top:100px;
+	left:170px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(90deg);
+}
+
+.msgPopPlayer1ChoiceClosed {
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 500px;
+	height: 80px;
+	top:80px;
+	left:50px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(90deg);
+}
+
+.msgPopPlayer2ChoiceOpen {
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 500px;
+	height: 80px;
+	top:610px;
+	left:860px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(-90deg);
+}
+
+.msgPopPlayer2ChoiceOpenComputer {
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 400px;
+	height: 80px;
+	top:120px;
+	left:840px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(90deg);
+}
+
+.msgPopPlayer2ChoiceClosed {
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 500px;
+	height: 80px;
+	top:610px;
+	left:965px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(-90deg);
+}
+
+.computer{
+	position:absolute;
+	font-weight: bold;
+	font-size: 120%;
+	width: 500px;
+	height: 100px;
+	top:90px;
+	left:950px;
+	-webkit-transform-origin:left;
+	-webkit-transform: rotate(90deg);
+}
+
+.bckGround {
+	background: url(../images/background.png) 0 0 no-repeat;
+}
+
+.readyButton {
+	position:relative;
+	width:80px;
+	height:50px;
+	background: url(../images/ready.png) 0 0 no-repeat;
+	margin-left: 10px;
+    top:5px;
+}
+
+.readyButtonClicked {
+	position:relative;
+	width:80px;
+	height:50px;
+	background: url(../images/readyclicked.png) 0 0 no-repeat;
+	margin-left: 10px;
+	top:5px;
+}
+
+.plusButton {
+	position:relative;
+	width:210px;
+	height:30px;
+	background: url(../images/plusbutton.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-left: 10px;
+    top:5px;
+}
+
+.plusButtonClicked {
+	position:relative;
+	width:210px;
+	height:30px;
+	background: url(../images/plusbuttonclick.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-left: 10px;
+	top:5px;
+}
+
+.minusButton {
+	position:relative;
+	width:210px;
+	height:30px;
+	background: url(../images/minusbutton.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-left: 10px;
+    top:5px;
+}
+
+.minusButtonClicked {
+	position:relative;
+	width:210px;
+	height:30px;
+	background: url(../images/minusbuttonclick.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	margin-left: 10px;
+	top:5px;
+}

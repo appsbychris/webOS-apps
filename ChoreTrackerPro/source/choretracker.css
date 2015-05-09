@@ -1,0 +1,831 @@
+/* Your CSS here */
+.helpPop {
+	background: none;
+	position:absolute;
+	bottom:40px;
+	
+}
+ .subhead {
+  font-size: 120%;
+  font-weight: bold;
+ }
+ 
+.helpDlg {
+  top: 0px;
+  width: 410px;
+  height: 100%;
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 2px 2px 2px 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.helpDlg h3 {
+  font-size: 20px
+}
+.pickerIcon {
+	width:42px;
+	height:42px;
+	position:relative;
+	top:3px;
+}
+
+.spinner1 {
+     background: url(../images/spinner1.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.spinner2 {
+     background: url(../images/spinner2.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.spinner3 {
+     background: url(../images/spinner3.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.imageListBack1 {
+	height: 100px;
+	width: 100px;
+	background: url(../images/imageback.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+}
+
+.tagLineBack {
+  height: 60px;
+  width: 100%;
+  background: url(../images/tagline.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.imageListBackSelected1 {
+	height: 100px;
+	width: 100px;
+	background: url(../images/imagebackselected.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+}
+
+.imageListBack0 {
+	height: 85px;
+	width: 85px;
+	background: url(../images/imageback.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+}
+
+.imageListBackSelected0 {
+	height: 85px;
+	width: 85px;
+	background: url(../images/imagebackselected.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+}
+
+.exitCustomButton {
+	width: 60px;
+  	height: 60px;
+  	background: url(../images/exitcustom.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.exitCustomButtonClick {
+	width: 60px;
+  	height: 60px;
+  	background: url(../images/exitcustomclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.viewOnlyButton {
+  width: 60px;
+    height: 56px;
+    background: url(../images/viewonly.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  
+   
+}
+
+.viewOnlyButtonClick {
+  width: 60px;
+    height: 56px;
+    background: url(../images/viewonlyclick.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  
+   
+}
+
+.tagBuilderButton {
+  width: 55px;
+    height: 55px;
+    background: url(../images/tagbuilder.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  
+   
+}
+
+.tagBuilderButtonClick {
+  width: 55px;
+    height: 55px;
+    background: url(../images/tagbuilderclick.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  
+   
+}
+
+.addButtonPhone {
+	width: 34px;
+  	height: 36px;
+  	background: url(../images/add.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.addButtonPhoneClick {
+	width: 34px;
+  	height: 36px;
+  	background: url(../images/addclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.addButtonTouchpad {
+	width: 40px;
+  	height: 42px;
+  	background: url(../images/add.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.addButtonTouchpadClick {
+	width: 40px;
+  	height: 42px;
+  	background: url(../images/addclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+/*.undoButtonPhone {
+	width: 56px;
+  	height: 56px;
+  	background: url(../images/undo.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.undoButtonPhoneClick {
+	width: 56px;
+  	height: 56px;
+  	background: url(../images/undoclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}*/
+
+.undoButtonTouchpad {
+	width: 56px;
+  	height: 56px;
+  	background: url(../images/undo.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+.undoButtonTouchpadClick {
+	width: 56px;
+  	height: 56px;
+  	background: url(../images/undoclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+	
+   
+}
+
+  .floaterbuttonclick {
+	background:white;
+    width:35px;
+    height:35px;
+   
+  }
+  .popBack2 {
+  	background: url(../images/popback.png);
+  	width:70px;
+  	height:70px;
+  	border:5px solid black;
+  	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+	position:absolute;
+    /*bottom:45px;*/
+  }
+  .popBack {
+  	background: url(../images/popback.png);
+  	width:135px;
+  	height:125px;
+  	border:5px solid black;
+  	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+  }
+  .enyo-toolbar {
+  	background:none;
+  }
+  .listPhone {
+  	height:88px;
+  }
+  .listPhoneCustom {
+  	height:88px;
+  	background-color:#FFB733
+  }
+
+  .listPhoneTagMode {
+    height:88px;
+    background-color:#6495ED
+  }
+
+  .listPhoneCustomTagMode {
+    height:88px;
+    background-color:#9400D3
+  }
+
+  .listTouchpad {
+  	height:165px;
+  }
+
+.TouchBar {
+	width:100%;
+	height:75px;
+}
+.syncBack {
+	/*background-color: #CFEBFD;*/
+	position:relative;
+	top:-10px
+}
+.mainBack {
+	background: url(../images/back.png);
+}
+.textTitle {
+	font-weight:bolder;
+	font-size:140%;
+}
+
+.textNotes {
+  font-weight:bold;
+  font-size:115%;
+}
+.detailsPop {
+	background: url(../images/back.png);
+	min-width: 300px;
+	z-index: 120;
+	position: absolute;
+	border:5px solid black;
+	border-radius:15px;
+}  
+  .toolbarBack {
+  	background: url(../images/toolbar.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  	height:45px;
+  }
+  
+  .toolbarPhone {
+  	  height: 35px;
+  }
+  
+  .lblTimePhone{
+  	font-size:80%;
+  }
+  
+  .lblTimeTouchpad{
+  	font-size:105%;
+  }
+  
+  .editButtonPhone {
+  	position:relative;
+  	left: -5px;
+  	top: 5px;
+  	width: 42px;
+  	height: 40px;
+  	background: url(../images/edit.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+  .editButtonPhoneClick {
+  	position:relative;
+  	left: -5px;
+  	top: 5px;
+  	width: 42px;
+  	height: 40px;
+  	background: url(../images/editclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+   .editButtonTouchpad {
+  	width: 50px;
+  	height: 45px;
+  	
+  	background: url(../images/edit.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+  .editButtonTouchpadClick {
+  	width: 50px;
+  	height: 45px;
+  	background: url(../images/editclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+
+  .showFilterButton {
+    width: 31px;
+    height: 45px;
+    background: url(../images/showfilter.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .showFilterButtonClick {
+    width: 31px;
+    height: 45px;
+    background: url(../images/showfilterclick.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .hideFilterButton {
+    width: 31px;
+    height: 45px;
+    background: url(../images/hidefilter.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .hideFilterButtonClick {
+    width: 31px;
+    height: 45px;
+    background: url(../images/hidefilterclick.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  
+   .checkButtonPhone {
+   	position:relative;
+  	top: 5px;
+  	width: 44px;
+  	height: 42px;
+  	background: url(../images/check.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+  .checkButtonPhoneClick {
+  	position:relative;
+  	top: 5px;
+  	width: 44px;
+  	height: 42px;
+  	background: url(../images/checkclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+   .checkButtonTouchpad {
+  	width: 75px;
+  	height: 75px;
+  	background: url(../images/check.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+  .checkButtonTouchpadClick {
+  	width: 75px;
+  	height: 75px;
+  	background: url(../images/checkclick.png) 0 0 no-repeat;
+  	background-size: 100% 100%;
+  }
+  
+.checkOff {
+	width:55px;
+	height:55px;
+	background: url(../images/checkoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.checkOn {
+	width:55px;
+	height:55px;
+	background: url(../images/checkon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+  
+  .imgPhone {
+  	height:40px;
+  	width:40px;
+  }
+
+  .expire0 {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .expire1 {
+    height: 32px;
+    width: 32px;
+  }
+
+  .notesList {
+  	height:200px;
+  }
+  
+  .imgTouchpad {
+  	height:75px;
+  	width:75px;
+  }
+  .listBackClear {
+  	
+  }
+ .listBackTouchpad {
+  	padding: 8px;
+  	background-image:url(../images/touchback.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  .listBackTouchpadCustom {
+  	padding: 8px;
+  	background-image:url(../images/touchbackcustom.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+
+  .listBackTouchpadTagMode {
+    padding: 8px;
+    background-image:url(../images/touchbacktagmode.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+
+    .listBackTouchpadCustomTagMode {
+    padding: 8px;
+    background-image:url(../images/touchbackcustomtagmode.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+
+    .listBackTouchpadPastdue {
+  	padding: 8px;
+  	background-image:url(../images/touchbackpastdue.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+
+
+
+  .listBack {
+  	
+  	background-image:url(../images/100p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+  
+ .listBack100 {
+  	
+  	background-image:url(../images/100p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack97 {
+  	
+  	background-image:url(../images/97p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack95 {
+  	
+  	background-image:url(../images/95p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack90 {
+  	
+  	background-image:url(../images/90p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack85 {
+  	
+  	background-image:url(../images/85p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack80 {
+  	
+  	background-image:url(../images/80p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack75 {
+  	
+  	background-image:url(../images/75p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack70 {
+  	
+  	background-image:url(../images/70p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack65 {
+  	
+  	background-image:url(../images/65p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack60 {
+  	
+  	background-image:url(../images/60p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack55 {
+  	
+  	background-image:url(../images/55p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack50 {
+  	
+  	background-image:url(../images/50p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack45 {
+  	
+  	background-image:url(../images/45p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack40 {
+  	
+  	background-image:url(../images/40p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack35 {
+  	
+  	background-image:url(../images/35p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack30 {
+  	
+  	background-image:url(../images/30p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack25 {
+  	
+  	background-image:url(../images/25p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+  
+   .listBack20 {
+  	
+  	background-image:url(../images/20p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack15 {
+  	
+  	background-image:url(../images/15p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack10 {
+  	
+  	background-image:url(../images/10p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack5 {
+  	
+  	background-image:url(../images/5p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+   .listBack0 {
+  	
+  	background-image:url(../images/0p.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+  }
+
+@media all and (max-width: 820px) and (min-width: 485px) and (max-height: 700px) {
+  
+  .listBack {
+    
+    background-image:url(../images/100.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+  
+ .listBack100 {
+    
+    background-image:url(../images/100.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack97 {
+    
+    background-image:url(../images/97.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack95 {
+    
+    background-image:url(../images/95.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack90 {
+    
+    background-image:url(../images/90.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack85 {
+    
+    background-image:url(../images/85.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack80 {
+    
+    background-image:url(../images/80.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack75 {
+    
+    background-image:url(../images/75.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack70 {
+    
+    background-image:url(../images/70.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack65 {
+    
+    background-image:url(../images/65.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack60 {
+    
+    background-image:url(../images/60.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack55 {
+    
+    background-image:url(../images/55.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack50 {
+    
+    background-image:url(../images/50.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack45 {
+    
+    background-image:url(../images/45.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack40 {
+    
+    background-image:url(../images/40.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack35 {
+    
+    background-image:url(../images/35.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack30 {
+    
+    background-image:url(../images/30.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack25 {
+    
+    background-image:url(../images/25.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+  
+   .listBack20 {
+    
+    background-image:url(../images/20.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack15 {
+    
+    background-image:url(../images/15.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack10 {
+    
+    background-image:url(../images/10.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack5 {
+    
+    background-image:url(../images/5.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+   .listBack0 {
+    
+    background-image:url(../images/0.png);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  }
+
+
+
+}
+
+  /*
+@media all and (max-width: 320px) {
+  .floaterbutton {
+  	position:absolute;
+    top:300px;
+    width:40px;
+    height:40px;
+    left:240px;
+    z-index:10000;
+  }
+}
+@media all and (max-width: 400px) and (min-width: 321px) {
+  .floaterbutton {
+  	position:absolute;
+    top:240px;
+    width:40px;
+    height:40px;
+    left:320px;
+    z-index:10000;
+  }
+}
+@media all and (max-width: 768px) and (min-width: 401px)  {
+  .floaterbutton {
+  	position:absolute;
+    top:964px;
+    width:40px;
+    height:80px;
+    left:718px;
+    z-index:10000;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 769px)  {
+  .floaterbutton {
+  	position:absolute;
+    top:718px;
+    width:40px;
+    height:80px;
+    left:978px;
+    z-index:10000;
+  }
+}*/

@@ -1,0 +1,15 @@
+{
+	"id": "com.chrisvanhooser.choretrackerpro",
+	"version": "1.0.6",
+	"vendor": "Apps By Chris",
+	"vendorurl": "http://chrishptouchpadapps.tumblr.com/",
+	"email": "appsbychrisvanhooser@gmail.com",
+	"type": "web",
+	"main": "index.html",
+	"title": "Chore Tracker Pro",
+	"icon": "images/icon64.png",
+	"uiRevision":2,
+	"logLevel": 99,
+	"noWindow": true,
+	"keywords": ["chore", "task", "box.net", "choretracker", "chores"]
+}
