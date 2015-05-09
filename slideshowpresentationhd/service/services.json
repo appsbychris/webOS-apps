@@ -1,0 +1,18 @@
+{
+	"id": "com.chrisvanhooser.slideshowpresentationhd.service",
+	"description": "FileIO Service",
+	"activityTimeout" : 520,
+	"services": [
+		{
+			"name": "com.chrisvanhooser.slideshowpresentationhd.service",
+			"description": "FileIO Service",
+			"commands": [
+				{
+				"name": "readdir",
+				"assistant": "ReadDirAssistant",
+				"public": true
+				}
+			]
+		}
+	]
+}

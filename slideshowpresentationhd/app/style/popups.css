@@ -1,0 +1,74 @@
+.indexPopupButtons {
+	width: 50px;
+	height: 40px;
+	font-size: 150%;
+	font-weight:bold;
+}
+
+.musicPop {
+	z-index: 101 !important;
+}
+
+.runSettingPopup {
+	z-index:110 !important;
+}
+
+.helpPopup {
+	position: absolute;
+	z-index:888 !important;
+}
+
+.indexPopupPosition {
+	position: absolute;
+	left: 0px;
+	top: 150px;
+	z-index:500 !important;
+}
+
+.jumpPopupPosition {
+	position: absolute;
+	left: 620px;
+	z-index:500 !important;
+}
+
+.addSettingsPopupPosition {
+	position: absolute;
+	left: 20%;
+	/*z-index:500 !important;*/
+}
+
+.globalCaptionPosition {
+	position: absolute;
+	top: 200px;
+	z-index:500 !important;
+}
+
+
+.fontColorPosition {
+	position: absolute;
+	bottom: 0px;
+	z-index:500 !important;
+}
+
+.editPicsFontColorPosition {
+	position: absolute;
+	/*top: 400px;*/
+	bottom: 0px;
+	left: auto;
+	right: 0px;
+	top: auto;
+	z-index:500 !important;
+}
+
+.fontSizePosition {
+	position: absolute;
+	bottom: 0px;
+	left: 150px;
+	z-index:500 !important;
+}
+
+.exifPosition {
+	position: absolute;
+	left: 150px;
+	z-index:500 !important;
+}

@@ -1,0 +1,285 @@
+/* Copyright 2009-2011 Hewlett-Packard Development Company, L.P. All rights reserved. */
+/*Your CSS here*/
+
+
+.helpBack {
+	-webkit-box-sizing: border-box !important;
+	border-width: 15px !important;
+	padding: 5px 10px 5px 10px;
+	-webkit-border-image: url(../images/clip_image001.png) 15 15 15 15 stretch stretch !important;
+	color: white !important;
+}
+
+.helpTitle {
+	-webkit-box-sizing: border-box !important;
+	border-width: 15px !important;
+	padding: 5px 10px 5px 10px;
+	-webkit-border-image: url(../images/clip_image001.png) 15 15 15 15 stretch stretch !important;
+	color: white !important;
+	font-size: 135%;
+	font-weight: bolder;
+}
+
+.colorBox {
+	position:relative;
+	left:235px;
+	border:2px solid black;
+	border-radius:10px;
+	width:100px;
+	height:50px;
+	
+	
+}
+
+.colorBoxInside {
+	border:2px solid black;
+	border-radius:10px;
+	padding-left:5px;
+	width:100px;
+	height:50px;
+}
+
+.datetimebox {
+	background:none;
+    position:absolute;  
+    float:left;
+    overflow:hidden;
+	z-index:101;
+	white-space: pre-wrap;
+}
+
+.imageToolbar {
+	position:absolute;
+	z-index:99999;
+	opacity:.75;
+}
+.caption1 {
+	font-size:xx-large;
+	font-weight:bold;
+	
+}
+.enyo-picker-popup {
+   
+	-webkit-box-sizing: border-box !important;
+	border-width: 10px !important;
+	padding: 5px 10px 5px 10px;
+	-webkit-border-image: url(../images/itemback.png) 10 10 10 10 stretch stretch !important;
+	color: white !important;
+}
+
+.enyo-picker-item-selected {
+	font-weight: bold;
+	background: transparent !important;
+}
+
+.enyo-menuitem{
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselected.png) 8 8 8 8 stretch stretch;
+}
+/*
+.enyo-menuitem .enyo-item.rounded.enyo-middle {
+	-webkit-box-sizing: border-box;
+	border-width: 10px;
+	-webkit-border-image: url(../images/imglistback.png) 10 10 10 10 stretch stretch;
+	color: white;
+}
+
+.enyo-menuitem .enyo-item.rounded.enyo-last {
+	-webkit-box-sizing: border-box;
+	border-width: 10px;
+	-webkit-border-image: url(../images/imglistback.png) 10 10 10 10 stretch stretch;
+	color: white;
+}*/
+
+.enyo-picker-button {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselected.png) 8 8 8 8 stretch stretch;
+}
+
+
+.enyo-picker-button.enyo-button {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselected.png) 8 8 8 8 stretch stretch;
+}
+
+.enyo-picker-button.enyo-button-down {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselectedclick.png) 8 8 8 8 stretch stretch;
+}
+
+.enyo-picker-button.enyo-button-depressed {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselected.png) 8 8 8 8 stretch stretch;
+}
+
+.enyo-picker-button.enyo-button-focus {
+	-webkit-border-image: url(../images/picker-pill-focus.png) 10;
+}
+
+.enyo-divider-caption {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 12pt;
+
+	/* Needs to be effectively zero compared to .enyo-divider-left-cap's
+	   flex so the caption will flex but take as little space as possible
+	   and still truncate properly */
+	-webkit-box-flex: .1;
+	color: white;
+}
+.enyo-divider-icon {
+	margin: 0 6px;
+	width: 40px;
+	height: 40px;
+}
+
+.enyo-divider-icon-collapse {
+	margin: 0 6px 0 0;
+	width: 45px;
+	height: 40px;
+}
+
+.editWindowPane {
+	background:#1674BC;/*#2F4F4F;*/
+	color:white;/*#F5F5F5;*/
+	/*z-index:20000;*/
+	width: 100%;
+	height: 100%;
+}
+
+.scrimBack {
+	position:absolute;top:0;left:0;width:100%;height:100%;background:black;color:white;
+}
+
+
+.enyo-item {
+	border-top: none;
+	border-bottom: none;
+	padding: 17px;
+}
+
+
+.editListItem {
+	-webkit-box-sizing: border-box;
+	border-width: 24px;
+	-webkit-border-image: url(../images/backimage.png) 24 24 24 24 stretch stretch;
+	color: white;
+}
+
+.editListSubItem {
+	-webkit-box-sizing: border-box !important;
+	border-width: 10px !important;
+	-webkit-border-image: url(../images/itemback.png) 10 10 10 10 stretch stretch !important;
+	color: white !important;
+	margin-top: 3px !important;
+	margin-bottom: 3px !important;
+}
+
+.editListImgList {
+	-webkit-box-sizing: border-box;
+	border-width: 10px;
+	-webkit-border-image: url(../images/imglistback.png) 10 10 10 10 stretch stretch;
+	color: white;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.editPicBack {
+	-webkit-box-sizing: border-box;
+	border-width: 10px;
+	-webkit-border-image: url(../images/editpicback.png) 10 10 10 10 stretch stretch;
+	color: white;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.editListImgListSelected {
+	-webkit-box-sizing: border-box;
+	border-width: 10px;
+	-webkit-border-image: url(../images/imglistbackselected.png) 10 10 10 10 stretch stretch;
+	color: white;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.editListItemList {
+	-webkit-box-sizing: border-box;
+	border-width: 24px;
+	-webkit-border-image: url(../images/listback.png) 24 24 24 24 stretch stretch;
+	color: white;
+}
+
+.editListItemSelected {
+	-webkit-box-sizing: border-box;
+	border-width: 24px;
+	-webkit-border-image: url(../images/listbackselected.png) 24 24 24 24 stretch stretch;
+	color: white;
+}
+
+.editListIndex {
+	font-size:xx-large;
+	font-weight:bold;
+	margin-top: 20px;
+	padding-right: 10px;
+	padding-left: 2px;
+}
+
+.editListIndexAudio {
+	font-size:xx-large;
+	font-weight:bold;
+	padding-right: 10px;
+	padding-left: 2px;
+}
+
+.anImage{
+	border-radius:50px;
+	width:90px;
+	height:100px;
+	/*padding-right: 10px*/
+}
+
+.bulkImage {
+	width: 48px;
+	height: 48px;
+	padding-right: 10px;
+}
+
+.wordWrap {
+	word-wrap: break-word;
+}
+
+.wordWrapBulk {
+	width: 100%;
+	word-wrap: break-word;
+	
+}
+
+.smallImage {
+	/*border:2px solid black;
+	border-radius:10px;*/
+	width:25px;
+	height:25px;
+	padding-right: 10px
+}
+
+.txtBox {
+	width:300px;
+	height:200px;
+	color:#272D32;
+	white-space: pre-wrap;
+}
+
+.txtBoxInside {
+	color:#272D32;
+	
+}
+
+
+

@@ -1,0 +1,308 @@
+.animateCanvas0 {
+	background:black;
+	position:absolute;
+	-webkit-transition: all 4800ms ease-in;
+
+	/*-webkit-transform-style: preserve-3d;*/
+	top:0;
+	left:0;
+
+}
+
+.animateCanvas1 {
+	background:black;
+	position:absolute;
+	-webkit-transition: all 4s ease-in;
+
+	/*-webkit-transform-style: preserve-3d;*/
+	top:0;
+	left:0;
+}
+
+.animateCanvas2 {
+	background:black;
+	position:absolute;
+	-webkit-transition: all 3s ease-in;
+
+	/*-webkit-transform-style: preserve-3d;*/
+	top:0;
+	left:0;
+}
+
+.animateCanvas3 {
+	background:black;
+	position:absolute;
+	-webkit-transition: all 2s ease-in;
+
+	/*-webkit-transform-style: preserve-3d;*/
+	top:0;
+	left:0;
+}
+
+.animateCanvas4 {
+	background:black;
+	position:absolute;
+	-webkit-transition: all 800ms ease-in;
+
+	/*-webkit-transform-style: preserve-3d;*/
+	top:0;
+	left:0;
+}
+
+.showingCanvas {
+	background:black;
+	position:absolute;
+	top:0;
+	left:0;
+	/*display: inline;*/
+
+	/*visibility: visible;*/
+	z-index: 99;
+}
+
+.topCanvas {
+	background:black;
+	position:absolute;
+	top:0;
+	left:0;
+	/*display: inline;*/
+
+	/*visibility: visible;*/
+	z-index: 101;
+}
+
+.showingBehindCanvas {
+	background:black;
+	position:absolute;
+	top:0;
+	left:0;
+	/*display: inline;*/
+	/*visibility: visible;*/
+	z-index: 5;
+}
+
+.hidingCanvas {
+	background:black;
+	position:absolute;
+	top:0;
+	left:-5000px;
+	/*display: none;*/
+	/*visibility: hidden;*/
+	z-index: 1;
+}
+
+.canvasBasicHiding {
+	background:black;
+	position:absolute;
+	top:0;
+	left:-5000px;
+	/*display: none;*/
+	/*visibility: hidden;*/
+	z-index: 1;	
+}
+
+.finishSwipe {
+	-webkit-transition: all 0.3s ease-in;
+	position: absolute;
+}
+
+
+/* Transitions matrix3d*/
+/*TODO needs EXHIB work*/
+.warpSpeed {
+	opacity: 0;
+	-webkit-transform-origin:center center;
+	/*-webkit-transform:matrix3d(20,-20,20,-20,20,-20,20,-20,20,-20,20,-20,20,-20,20,-20);*/
+	-webkit-transform:rotate3d(0,0,0,180deg) scale3d(10,10,0);
+} 
+
+/*TODO could use exhib work...*/
+.flipAndShrinkToCenter {
+	opacity: 0;
+	-webkit-transform-origin:center center;
+	/*-webkit-transform:matrix3d(-125,45,77,-2,144,88,-72,222,5,77,-35,28,296,350,84,325);*/
+	-webkit-transform:rotate3d(1,5,0,180deg) scale3d(0.1,0.1,0);
+} 
+
+.flipAndZoomIn {
+	opacity: 0;
+	
+	-webkit-transform-origin:center center;
+	/*-webkit-transform:matrix3d(25,14,55,128,23,67,23,111,243,2,12,87,43,128,34,12);*/
+	-webkit-transform:rotate3d(-1,-1,0,180deg) scale3d(2,2,0);
+} 
+
+
+/*TODO EXHIB*/
+.windmill {
+	opacity: 0;
+	-webkit-transform-origin:center center;
+	/*-webkit-transform:skew(0deg,720deg);*/
+	-webkit-transform:rotate3d(0,0,0,720deg) scale3d(-0.8,1.7,0);
+} 
+
+.spinSkewAndFade {
+	opacity: 0;
+	
+	-webkit-transform-origin:center center;
+	-webkit-transform:rotate3d(4,1,0,720deg); /*skew(20deg,100deg)*/
+} 
+
+.shrinkTopLeft {
+	
+	-webkit-transform-origin:left top;
+	-webkit-transform:scale3d(0,0,0);
+	
+}
+
+.fadeOut {
+	opacity: 0;
+		
+}
+
+.fadeShrinkTopLeftCorner {
+	opacity: 0;
+	-webkit-transform:scale3d(0,0,0) translate3d(-600px,-600px,0);
+}
+
+.fadeShrinkBottomRight {
+	opacity: 0;
+	-webkit-transform:scale3d(0,0,0) translate3d(600px,600px,0);
+}
+
+.shrinkLeft {
+	-webkit-transform-origin:left;
+	-webkit-transform:scaleX(0);
+	
+}
+
+.shrinkTop {
+	
+	-webkit-transform-origin:top;
+	-webkit-transform:scaleY(0);
+	
+}
+
+.moveOffLeft {
+	
+	-webkit-transform:translate3d(-1100px,0,0);
+	
+}
+
+.moveOffLeftAndShrink {
+	-webkit-transform-origin:right;
+	-webkit-transform:translate3d(-1100px,0,0) scale3d(0,0,0);
+	
+}
+
+.moveOffRight {
+	-webkit-transform:translate3d(1100px,0,0);
+	
+}
+
+.moveOffRightAndShrink {
+	-webkit-transform-origin:left;
+	-webkit-transform:translate3d(1100px,0,0) scale3d(0,0,0);
+	
+}
+
+.moveOffTop {
+	-webkit-transform:translate3d(0,-1100px,0);
+	
+}
+
+.moveOffTopAndShrink {
+	-webkit-transform-origin:bottom;
+	-webkit-transform:translate3d(0,-1100px,0) scale3d(0,0,0);
+	
+}
+
+.moveOffBottom {
+	-webkit-transform:translate3d(0,1100px,0);
+	
+}
+
+.moveOffBottomAndShrink {
+	-webkit-transform-origin:top;
+	-webkit-transform:translate3d(0,1100px,0) scale3d(0,0,0);
+	
+}
+
+.flattenVerticle {
+	
+	-webkit-transform:scaleY(0);
+	
+}
+
+.flattenHorrizontal {
+	-webkit-transform:scaleX(0);
+	
+}
+
+.spinOffShrinkTopLeftCorner {
+	
+	-webkit-transform: translate3d(-300px,-300px,0) scale3d(0,0,0) rotate3d(0,0,0,250deg);
+	
+	
+}
+
+.spinAndShrinkTowardCenter {
+	
+	-webkit-transform: scale3d(0,0,0) rotate3d(0,0,0,250deg);
+	
+}
+
+
+/*might need EXHIB work*/
+.spinAndFade {
+	opacity: 0;
+	-webkit-transform: rotate3d(0,0,0,250deg);
+	
+}
+/*NEW*/
+.rotateHorIn3D {
+
+	/*-webkit-transform:rotate3d(50, 1000,150,140deg);*/
+	-webkit-transform:rotate3d(.5, 1,0,140deg);
+	opacity: 0;
+	
+}
+.rotateVerIn3D {
+	/*-webkit-transform:rotate3d(1000, 50,150,-140deg);*/
+	-webkit-transform:rotate3d(1, .5,0,-140deg);
+	opacity: 0;
+	
+}
+.rotateWarpIn3D {
+	-webkit-transform:rotate3d(1, 1,0,-100deg);
+	opacity: 0;
+	
+}
+
+/*TODO NEEDS EXHIB WORK*/
+.rotateSpinIn3D {
+	-webkit-transform:rotate3d(-1, 1,0,200deg);
+	opacity: 0;
+	
+}
+
+
+.rotateSpinShrinkIn3D {
+	-webkit-transform:rotate3d(-1, 1,0,250deg) scale3d(0,0,0);
+	
+}
+.rotateSpinShrinkTopLeft {
+	-webkit-transform-origin:left top;
+	-webkit-transform:rotate3d(-1, 1,0,250deg) scale3d(0, 0,0);
+	
+}
+.rotateSpinShrinkBottomRight {
+	-webkit-transform-origin:right bottom;
+	-webkit-transform:rotate3d(1, -1,0,-250deg) scale3d(0, 0,0);
+	
+}
+.superSpinShrink {
+	-webkit-transform-origin:70% 40% 500px;
+	-webkit-transform:rotate3d(2, -2,0,-250deg) scale3d(0, 0,0);
+	
+}

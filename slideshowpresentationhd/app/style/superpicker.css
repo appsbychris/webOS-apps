@@ -1,0 +1,54 @@
+
+
+.enyo-popup2 {
+	min-width: 200px;
+	
+}
+
+
+.superPickerBack {
+	-webkit-box-sizing: border-box !important;
+	border-width: 10px !important;
+	-webkit-border-image: url(../images/superpickerback.png) 10 10 10 10 stretch stretch !important;
+	color: white !important;
+	margin-top: 3px !important;
+	margin-bottom: 3px !important;
+}
+
+.superPickerBaseButton {
+	color: white;
+	background-image:url(../images/superpickerbutton.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	/*border: 2px solid black;*/
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	padding: 3px 8px 3px 8px;
+
+}
+
+.superPickerBaseButtonClick {
+	color: white;
+	background-image:url(../images/superpickerbuttonclick.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	/*border: 2px solid black;*/
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	padding: 3px 8px 3px 8px;
+
+}
+
+.superPickerItem {
+	background-image:url(../images/pickeritem.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}
+
+.superPickerItemSelected {
+	background-image:url(../images/pickeritemselected.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}

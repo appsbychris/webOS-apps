@@ -1,0 +1,452 @@
+.helpButton {
+	width:48px;
+	height:48px;
+	background: url(../images/helpicon.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.helpButtonClicked {
+	width:48px;
+	height:48px;
+	background: url(../images/helpiconclick.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.rightButton {
+	position: absolute;
+	background: url(../images/rightarrow.png) 0 0 no-repeat;
+	width:95px;
+	height:60px;
+	right:20px;
+	top: 500px;
+	z-index: 99999;
+}
+
+.rightButtonClicked {
+	position: absolute;
+	background: url(../images/rightarrowclick.png) 0 0 no-repeat;
+	width:95px;
+	height:60px;
+	right:20px;
+	top: 500px;
+	z-index: 99999;
+}
+
+.previewButton {
+	background: url(../images/previewbutton.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:50px;
+	height:49px;
+}
+
+.previewButtonClicked {
+	background: url(../images/previewbuttonclick.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:50px;
+	height:49px;
+}
+
+.leftButton {
+	position: absolute;
+	background: url(../images/leftarrow.png) 0 0 no-repeat;
+	width:95px;
+	height:60px;
+	left:0px;
+	top: 500px;
+	z-index: 99999;
+}
+
+.leftButtonClicked {
+	position: absolute;
+	background: url(../images/leftarrowclick.png) 0 0 no-repeat;
+	width:95px;
+	height:60px;
+	left:0px;
+	top: 500px;
+	z-index: 99999;
+}
+
+.nextSongButton {
+	width:64px;
+	height:74px;
+	background: url(../images/nextsong.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.nextSongButtonClicked {
+	width:64px;
+	height:74px;
+	background: url(../images/nextsongclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.nextSongButtonDisabled {
+	width:64px;
+	height:74px;
+	background: url(../images/nextsongdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+
+.backFolderButton {
+	width:183px;
+	height:100px;
+	background: url(../images/backfolder.png) 0 0 no-repeat;
+	margin-bottom: 10px;
+}
+
+.backFolderButtonClicked {
+	width:183px;
+	height:100px;
+	background: url(../images/backfolderclick.png) 0 0 no-repeat;
+	margin-bottom: 10px;
+}
+
+.backFolderButtonDisabled {
+	width:183px;
+	height:100px;
+	background: url(../images/backfolderdisabled.png) 0 0 no-repeat;
+	margin-bottom: 10px;
+}
+
+
+.backSongButton {
+	width:64px;
+	height:74px;
+	background: url(../images/backsong.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.backSongButtonClicked {
+	width:64px;
+	height:74px;
+	background: url(../images/backsongclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.backSongButtonDisabled {
+	width:64px;
+	height:74px;
+	background: url(../images/backsongdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.pauseButton {
+	width:64px;
+	height:74px;
+	background: url(../images/pause.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.pauseButtonClicked {
+	width:64px;
+	height:74px;
+	background: url(../images/pauseclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.playButton {
+	width:64px;
+	height:74px;
+	background: url(../images/play.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.playButtonClicked {
+	width:64px;
+	height:74px;
+	background: url(../images/playclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.playButtonDisabled {
+	width:64px;
+	height:74px;
+	background: url(../images/playdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	padding-left:5px;
+}
+
+.addPictureButton {
+	width:75px;
+	height:74px;
+	background: url(../images/addpicture.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addPictureButtonClicked {
+	width:75px;
+	height:74px;
+	background: url(../images/addpictureclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addPictureButtonDisabled {
+	width:75px;
+	height:74px;
+	background: url(../images/addpicturedisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addAudioButton {
+	width:75px;
+	height:74px;
+	background: url(../images/addmusic.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addAudioButtonClicked {
+	width:75px;
+	height:74px;
+	background: url(../images/addmusicclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addAudioButtonDisabled {
+	width:75px;
+	height:74px;
+	background: url(../images/addmusicdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.editPictureButton {
+	width:75px;
+	height:74px;
+	background: url(../images/editpicture.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.editPictureButtonClicked {
+	width:75px;
+	height:74px;
+	background: url(../images/editpictureclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.editPictureButtonDisabled {
+	width:75px;
+	height:74px;
+	background: url(../images/editpicturedisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+.editAudioButton {
+	width:75px;
+	height:74px;
+	background: url(../images/editmusic.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.editAudioButtonClicked {
+	width:75px;
+	height:74px;
+	background: url(../images/editmusicclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.editAudioButtonDisabled {
+	width:75px;
+	height:74px;
+	background: url(../images/editmusicdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addFolderButton {
+	width:75px;
+	height:74px;
+	background: url(../images/addfolder.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addFolderButtonClicked {
+	width:75px;
+	height:74px;
+	background: url(../images/addfolderclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.addFolderButtonDisabled {
+	width:75px;
+	height:74px;
+	background: url(../images/addfolderdisabled.png) 0 0 no-repeat;
+	padding-right: 10px;
+	background-size:100% 100%;
+}
+
+.pictureAddSettingsButton {
+	width:85px;
+	height:74px;
+	background: url(../images/pictureaddsettings.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.pictureAddSettingsButtonClicked {
+	width:85px;
+	height:74px;
+	background: url(../images/pictureaddsettingsclick.png) 0 0 no-repeat;
+	
+	background-size:100% 100%;
+}
+
+.showAudioButton {
+	width:63px;
+	height:67px;
+	background: url(../images/showmusic.png) 0 0 no-repeat;
+	
+}
+
+.showAudioButtonClicked {
+	width:63px;
+	height:67px;
+	background: url(../images/showmusicclick.png) 0 0 no-repeat;
+}
+
+.hideAudioButton {
+	width:65px;
+	height:65px;
+	background: url(../images/closemusic.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+.hideAudioButtonClicked {
+	width:65px;
+	height:65px;
+	background: url(../images/closemusicclick.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+
+.showMenuButton {
+	width:160px;
+	height:110px;
+	background: url(../images/openmenu.png) 0 0 no-repeat;
+	
+}
+
+.showMenuButtonClicked {
+	width:160px;
+	height:110px;
+	background: url(../images/openmenuclick.png) 0 0 no-repeat;
+}
+
+.pauseOverlayButton {
+	width:74px;
+	height:69px;
+	background: url(../images/pauseoverlay.png) 0 0 no-repeat;
+	
+}
+
+.pauseOverlayButtonClicked {
+	width:74px;
+	height:69px;
+	background: url(../images/pauseoverlayclick.png) 0 0 no-repeat;
+}
+
+.checkOff {
+	width:55px;
+	height:55px;
+	margin-right: 10px;
+	background: url(../images/checkoff.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.checkOn {
+	width:55px;
+	height:55px;
+	margin-right: 10px;
+	background: url(../images/checkon.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.checkOffSmall {
+	width:45px;
+	height:45px;
+	margin-right: 10px;
+	background: url(../images/checkoff.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.checkOnSmall {
+	width:45px;
+	height:45px;
+	margin-right: 10px;
+	background: url(../images/checkon.png) 0 0 no-repeat;
+	background-size:100% 100%;
+}
+
+.backButton {
+	width:64px;
+	height:64px;
+	background: url(../images/back.png) 0 0 no-repeat;
+	padding-right: 10px;
+}
+
+.backButtonClicked {
+	width:64px;
+	height:64px;
+	background: url(../images/backclick.png) 0 0 no-repeat;
+	padding-right: 10px;
+}
+
+.startButton {
+	width:135px;
+	height:128px;
+	background: url(../images/start.png) 0 0 no-repeat;
+	margin-top: 10px;
+	background-size:100% 100%;
+}
+
+.startButtonClicked {
+	width:135px;
+	height:128px;
+	background: url(../images/startclick.png) 0 0 no-repeat;
+	margin-top: 10px;
+	background-size:100% 100%;
+}
+
+.startButtonDisabled {
+	width:135px;
+	height:128px;
+	background: url(../images/startdisabled.png) 0 0 no-repeat;
+	margin-top: 10px;
+	background-size:100% 100%;
+}
+
+.stopButton {
+	width:100px;
+	height:96px;
+	background: url(../images/stop.png) 0 0 no-repeat;
+	margin-top: 10px;
+	background-size:100% 100%;
+}
+
+.stopButtonClicked {
+	width:100px;
+	height:96px;
+	background: url(../images/stopclick.png) 0 0 no-repeat;
+	margin-top: 10px;
+	background-size:100% 100%;
+}

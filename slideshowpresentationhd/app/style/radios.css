@@ -1,0 +1,449 @@
+.panAndZoomSelected {
+	background-color: blue;
+	width:48px;
+	height:48px;
+}
+
+.buttonCaptionSettings {
+	margin-top:3px;
+	font-size:70%;
+	font-weight:bold;
+	line-height:75%;
+	letter-spacing:-0.5px;
+}
+
+.randomIcon {
+	background: url(../images/randomicon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.leftArrow {
+	background: url(../images/left.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.rightArrow {
+	background: url(../images/right.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+
+.upArrow {
+	background: url(../images/up.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+
+.downArrow {
+	background: url(../images/down.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+
+.topLeftArrow {
+	background: url(../images/topleft.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+.bottomRightArrow {
+	background: url(../images/bottomright.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+
+.topRightArrow {
+	background: url(../images/topright.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+.bottomLeftArrow {
+	background: url(../images/bottomleft.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:48px;
+	height:48px;
+	margin-left: auto;   
+	margin-right: auto;
+	
+}
+
+.audioRandomOn {
+	background: url(../images/audiorandomon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.audioRandomOff {
+	background: url(../images/audiorandomoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.audioOrderOn {
+	background: url(../images/audioorderon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.audioOrderOff {
+	background: url(../images/audioorderoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.noAudioOn {
+	background: url(../images/noaudioon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.noAudioOff {
+	background: url(../images/noaudiooff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+
+.pictureRandomOn {
+	background: url(../images/picturerandomon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureRandomOff {
+	background: url(../images/picturerandomoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderOn {
+	background: url(../images/pictureorderon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderOff {
+	background: url(../images/pictureorderoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderFileNameOn {
+	background: url(../images/pictureorderfilenameon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderFileNameOff {
+	background: url(../images/pictureorderfilenameoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderPathOn {
+	background: url(../images/pictureorderpathon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderPathOff {
+	background: url(../images/pictureorderpathoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderBothOn {
+	background: url(../images/pictureorderbothon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.pictureOrderBothOff {
+	background: url(../images/pictureorderbothoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeDurationOn {
+	background: url(../images/changedurationon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeDurationOff {
+	background: url(../images/changedurationoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeSongChangeOn {
+	background: url(../images/changesongchangeon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeSongChangeOff {
+	background: url(../images/changesongchangeoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeManualOn {
+	background: url(../images/changemanualon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeManualOff {
+	background: url(../images/changemanualoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeCustomDurationOn {
+	background: url(../images/changecustomdurationon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.changeCustomDurationOff {
+	background: url(../images/changecustomdurationoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatRepeatOn {
+	background: url(../images/repeatrepeaton.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatRepeatOff {
+	background: url(../images/repeatrepeatoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatPlayOnceOn {
+	background: url(../images/repeatplayonceon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatPlayOnceOff {
+	background: url(../images/repeatplayonceoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatEndWithMusicOn {
+	background: url(../images/repeatendwithmusicon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.repeatEndWithMusicOff {
+	background: url(../images/repeatendwithmusicoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionFileNameOn {
+	background: url(../images/captionfilenameon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionFileNameOff {
+	background: url(../images/captionfilenameoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionFilePathOn {
+	background: url(../images/captionfilepathon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionFilePathOff {
+	background: url(../images/captionfilepathoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionBothOn {
+	background: url(../images/captionbothon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.captionBothOff {
+	background: url(../images/captionbothoff.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:55px;
+	height:55px;
+	margin-left: auto;   
+	margin-right: auto;
+}
+
+.radioSelected {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	-webkit-border-image: url(../images/radioselected.png) 8 8 8 8 stretch stretch;
+	height:100%;
+	text-align:center;
+	/*background: url(../images/radioselected.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:75px;
+	height:75px;*/
+}
+
+.radioUnSelected {
+	-webkit-box-sizing: border-box;
+	border-width: 8px;
+	color: #333;
+	height:100%;
+	text-align:center;
+	-webkit-border-image: url(../images/trans.png) 8 8 8 8 stretch stretch;
+	/*background: url(../images/radioselected.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width:75px;
+	height:75px;*/
+}

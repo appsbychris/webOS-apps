@@ -1,0 +1,225 @@
+enyo.kind({
+	name: "InternalHelp",
+	kind: "Pane",
+	events: {
+		onShutDown: ""
+	},
+	components: [
+		{kind: "VFlexBox", flex: 1, components:[
+			{kind: "HFlexBox", style: "height:80px", className: "editListSubItem", components: [
+	            {kind: "MyCustomButton", defaultClassName:"backButton", clickClassName: "backButtonClicked", name:"backAud", onButtonClicked: "shutDown"},                            
+	        	{name: "audHeaderContent", content: "Help", flex: 1},
+	        	{kind: "HFlexBox", onclick: "launchEmail", align: "center", components: [
+					{kind: "Control", style: "width: 32px; margin: 0 8px 0 0", components: [
+						{kind: "Image", src: "images/support/application-email.png"}
+					]},
+					{allowHtml: true,style: "font-size:80%;font-weight:bold;",content: $L("E-Mail Apps By Chris with<br />any questions or comments.")}
+				]}
+	        ]},
+			{kind: "VFlexBox", flex: 1, components:[
+				{kind: "VFlexBox", flex: 1, components:[
+					{kind: "Scroller", className: "editListSubItem", flex: 1, components: [
+						{kind: "VFlexBox", components:[
+							{kind: "HtmlContent",srcId: "help", style: "height:100%;width:100%;"}
+						]}
+					]}
+				]}
+			]}
+		]},
+		{name: "launchService", kind: "PalmService", service: "palm://com.palm.applicationManager/", method: "launch", onFailure: "serviceFailure"}
+	],
+	shutDown: function() {
+		this.doShutDown()
+	},
+	launchEmail: function () {
+		var text, i, statusItem, statusTemplate, deviceInfo, pName;
+		var appInfo = enyo.fetchAppInfo();
+		this.log(enyo.json.stringify(appInfo))
+		var email = appInfo.email;
+		
+		text = "<br /><br />" +
+			new enyo.g11n.Template("#{title} for HP webOS, version #{version}").evaluate(appInfo);
+				
+		text += "<h2>Environment</h2><dl>";
+//		text += "<dt>Mojo.Environment.build</dt><dd>" + Mojo.Environment.build + "</dd>";
+		deviceInfo = enyo.fetchDeviceInfo();
+		for (pName in deviceInfo) {
+			text += "<dt>" + pName + "</dt><dd>";
+			text += deviceInfo[pName];
+			text += "</dd>";
+		}
+		text += "</dl>";
+				
+		enyo.windows.addBannerMessage($L("Enter a description of your issue"), "{}");
+		
+		this.$.launchService.call({
+			id: "com.palm.app.email",
+			params: {
+				summary: appInfo.title + " question",
+				text: text,
+				recipients: [{type: "email", role: 1, value: email, contactDisplay: appInfo.title + " Support"}]
+			}
+		});
+	},
+});
+
+enyo.kind({
+	name: "InternalHelpPopup",
+	kind: "Toaster",
+	flyInFrom: "left",
+	className: "editListItem helpPopup",
+	lazy: false,
+	events: {
+		onShutDown: ""
+	},
+	components: [
+		{kind: "VFlexBox", flex: 1, components:[
+			{kind: "HFlexBox", style: "height:80px", className: "editListSubItem", components: [
+	            //{kind: "MyCustomButton", defaultClassName:"backButton", clickClassName: "backButtonClicked", name:"backAud", onButtonClicked: "shutDown"},                            
+	            //This button to debug scroll spot
+	            {kind: "Button", onclick: "reportscroll", showing: false},
+	        	{name: "audHeaderContent", content: "Help", flex: 1},
+	        	{kind: "HFlexBox", onclick: "launchEmail", align: "center", components: [
+					{kind: "Control", style: "width: 32px; margin: 0 8px 0 0", components: [
+						{kind: "Image", src: "images/support/application-email.png"}
+					]},
+					{allowHtml: true,style: "font-size:80%;font-weight:bold;",content: $L("E-Mail Apps By Chris with<br />any questions or comments.")}
+				]}
+	        ]},
+			{kind: "VFlexBox", style: "height:100%;width:100%;", components:[
+				{kind: "VFlexBox", style: "height:100%;width:100%;", components:[
+					{kind: "Scroller",name: "scoll", className: "editListSubItem", style: "height:600px;width:100%;", components: [
+						{kind: "VFlexBox", style: "height:100%;width:100%;", components:[
+						
+							{kind: "HtmlContent",name: "helpFile", style: "height:100%;width:100%;"},
+							
+						]}
+					]}
+				]}
+			]}
+		]},
+		{name: "launchService", kind: "PalmService", service: "palm://com.palm.applicationManager/", method: "launch", onFailure: "serviceFailure"}
+	],
+	reportscroll: function() {
+		this.$.audHeaderContent.setContent(this.$.scoll.getScrollTop())
+	},
+	shutDown: function() {
+		this.close()
+	},
+	launchEmail: function () {
+		var text, i, statusItem, statusTemplate, deviceInfo, pName;
+		var appInfo = enyo.fetchAppInfo();
+		this.log(enyo.json.stringify(appInfo))
+		var email = appInfo.email;
+		
+		text = "<br /><br />" +
+			new enyo.g11n.Template("#{title} for HP webOS, version #{version}").evaluate(appInfo);
+				
+		text += "<h2>Environment</h2><dl>";
+//		text += "<dt>Mojo.Environment.build</dt><dd>" + Mojo.Environment.build + "</dd>";
+		deviceInfo = enyo.fetchDeviceInfo();
+		for (pName in deviceInfo) {
+			text += "<dt>" + pName + "</dt><dd>";
+			text += deviceInfo[pName];
+			text += "</dd>";
+		}
+		text += "</dl>";
+				
+		enyo.windows.addBannerMessage($L("Enter a description of your issue"), "{}");
+		
+		this.$.launchService.call({
+			id: "com.palm.app.email",
+			params: {
+				summary: appInfo.title + " question",
+				text: text,
+				recipients: [{type: "email", role: 1, value: email, contactDisplay: appInfo.title + " Support"}]
+			}
+		});
+	},
+
+	openAndScroll: function(scrollTo) {
+		this.$.helpFile.setContent(HELP_DOCUMENT)
+		var x = 0
+		switch (scrollTo) {
+			case "gettingstarted": {
+				x = 0
+				break;
+			};
+			case "bulkadding": {
+				x = 444
+				break;
+			};
+			case "addsettings": {
+				x = 2145
+				break;
+			};
+			case "editpictures": {
+				x = 4172
+				break;
+			};
+			case "editmusic": {
+				x = 9183
+				break;
+			}
+			case "cinematic": {
+				x = 6644
+				break;
+			};
+			case "deleteall": {
+				x = 9519
+				break;
+			};
+			case "showsettings": {
+				x = 9848
+				break;
+			};
+			case "caption": {
+				x = 11679
+				break;
+			};
+			case "override": {
+				x = 12756
+				break;
+			};
+			case "running": {
+				x = 14359
+				break;
+			};
+			case "musicpopup": {
+				x = 15517
+				break;
+			};
+			case "projects": {
+				x = 16042
+				break;
+			};
+			case "prefs": {
+				x = 17053
+				break;
+			};
+		}
+		this.open();
+		//this.log("SCROLLING TO================>>(" + scrollTo + ")=" + x)
+		this.$.scoll.scrollIntoView(x, 0);
+	},
+});
+
+enyo.kind({
+	name: "HelpButton",
+	kind: "VFlexBox",
+	published: {
+		helpID: "gettingstarted"
+	},
+	events: {
+		onHelpRequested: ""
+	},
+	components: [
+		//{kind: "Button", caption: "?", onclick: "requestHelp"}
+		{kind: "MyCustomButton", defaultClassName:"helpButton", clickClassName: "helpButtonClicked", onButtonClicked: "requestHelp"}                            
+	],
+	requestHelp: function() {
+		this.doHelpRequested(this.helpID)
+	}
+});
+
+var HELP_DOCUMENT = "<p> Slideshow Presentation HD help/overview v2.0.2 </p> <p> <div class=\"helpTitle\">Getting started:</div> </p> <p> The first thing you need to do is select some pictures. <br/> There are 2 methods to add photos. <br/> Single File Pick: <br/> Click on the Choose Photos button located in the middle of the right section of the screen. <br/> Choose which pictures you want in your show. The dialog lets you select multiple items at once (per folder). If you try and add the same picture you’ve already added, only 1 copy of the image will display. </p> <p> Bulk Adding: <br/> Click the Add By Folder button located on the right section of the screen. This will load up the bulk add screen. On the left side, there will be a list of folders and files that are on your device. Clicking on a folder will bring you inside that folder and the list will repopulate. To go back out of the current folder, hit the silver arrow above the list. The current path will be listed above the list, and in the header of the page. <br/> Once you find the folder you want to add, on the right side of the screen there are 3 options for the types of files to add. (Pictures, Music, Both). <br/> Selecting “Pictures”, the application will only add picture files (\".jpg\", \".jpeg\", \".bmp\", \".png\", \".gif\") <br/> Selecting “Music”, only music files will be added (\".mp3\", \".wav\", \".ogg\", \".flac\", \".aac\", \".amr\", \".3g2\", “.m4a”) <br/> Selecting “Both” will added all previously listed file types. <br/> The next option allows you to sort the files before they are added. You can sort by File name, Path without File name, or full path with file name. <br/> Below the sort are 2 toggle options: <br/> First is “Show Hidden”. This will allow you to see and add folders and files that are considered “hidden”. <br/> Next is “Add Folders And Subfolders”. This option will make it so the program adds all the files in the currently selected directory, and if there are any folders in the current directory, it will scan through them all and also add all those files. Note: If you run this at the base directory (“/media/internal”), it will take a couple minutes to scan and add everything depending on how many files you have. <br/> Once you have made your selection, in the top right there is a green button labeled “Add This Folder”. Click it and the app will start adding your files. A conformation dialog will come up when it is finished saying how many files were added. <br/> When you are finished, hit the back arrow in the top left corner. </p> <p> (Note: Sometimes webOS has problems communicating with the file system service. When this happens, and blue button labeled “Refresh” will show up and you can attempt your request again. If it still fails you may need to restart the app. If that fails, try up to 2 full device restarts.) <br/> <br/> Once you have chosen some pictures, the program is ready to go. <br/> The program requires you to have at least 2 photos to run a show. </p> <p> You can add music to your slide show by pushing the “Choose Music” button that is below the “Choose Photos” button, or through the Add By Folder method listed above. You do not need to have music to run a show. In the Edit Music screen, there is an option to preview the audio. Simply select a track, and click the play button. </p> <p> For adding pictures, there are some options you can set that will apply to each picture, each time you add them. Click the “Picture Add Settings” button located in the right section of the screen. This will make a popup slide out with settings you can change. First setting is the caption color. This sets what color the date/time, song name, and caption show up as for that picture. Settings are: </p> <p> Caption Color: <br/> Random: Each picture will get a random color <br/> Use the Global Over-ride Color: Each picture will have the same color that you select for the Global color. (More about this setting later on) <br/> White &amp; Black: You can have them all have a white or black color. </p> <p> The next setting is the Caption location. Settings are: <br/> Caption Location: <br/> Random: Each Picture will have a randomly set caption location (Top or Bottom) <br/> Top and Bottom: All pictures will just have the 1 location you choose. </p> <p> After location is the caption Font Size. Each picture can have its own font size in the following settings: <br/> Font Size: <br/> Random: You can select a range and each picture will have a random font size within that range. <br/> Use Just One: You select just one size for every picture to have. </p> <p> Next is the transition you wish to use: <br/> Click the blue button to bring up the transition selection popup. The top part is the transition setting. You can set to Random, None, or choose from a variety of transitions. Simply tap on your choice to select it. You can preview them by clicking the magnifying glass icon located on the top right of each item. <br/> Below the transitions is the option to set a speed for the transition. There are 5 different speeds. Slowest = 4.8 seconds, Slow = 4 seconds, Fast = 3 seconds, Faster = 2 seconds, Turbo = .85 seconds. You can also set it to choose a random speed. <br/> Once you have chosen your settings, click the big green OK button to confirm. </p> <p> Next up is the Cinematic mode setting. (More explained about Cinematic mode further down in the help). Settings are: <br/> Cinematic Mode: <br/> The cinematic mode picker is set up like the transition picker. The top section has the cinematic effect to add, and a preview button so you can see what it does. Clicking on a selection (other than “None”) will make more options to appear below the cinematic effects. <br/> You can choose which direction the panning of the picture will start on. If you choose random, the direction will also be random. <br/> Once you have made your decision, click the big green OK button. </p> <p> So now, each time you add pictures to this project, they will have these settings. The settings are saved on a per-project basis. </p> <p> You can also change these settings and apply them all to your current project’s photos. Click the green “Apply to current project” button located in the top right section of the Picture Add Settings popup. <br/> <br/> Click the green “Done” button to dismiss the popup. </p> <p> <div class=\"helpTitle\">Edit Picture Settings:</div> </p> <p> To edit picture settings, click the “Edit Pictures” button located to the right of the “Choose Photos” button. This will load up a new screen where you can edit specific details about each photo you have added. </p> <p> The large photo in the center of the screen is the current photo you are editing. You can swipe left and right in this section to move forward or back a picture. </p> <p> Above the large center picture is a list of the other photos in your project. For speed and memory management, the app only loads a smaller amount of the total photos at a time. </p> <p> To load the next set of pictures, there are a few ways. </p> <p> First, in the list of smaller pictures on the top, tapping on the first or last item will cause it to load up the next set of photos. <br/> Second is to swipe forward or backwards on the larger center picture until you reach the end. <br/> And last, located in the top right corner of the screen is the “Jump To” button. Above the Jump To button is information about the range of pictures that are currently loaded and how many total pictures the show has. <br/> Clicking the green “Jump To” will cause a popup to slide into the screen. Enter an index number and click the green “OK” button to load up a range that will include that index. <br/> <br/> Edit Options: <br/> <br/> Options on the left side of the screen: <br/> The “Index” is a way you can sort your photos to show up in the order you want. The program will display them starting at 0. Index numbers are unique. </p> <p> The next option is Stretch. With this on, your picture will be stretched to fit the entire screen. This can distort a picture somewhat, so you have the option to have it on or off. </p> <p> Below that, is Rotation. You can set the picture to be rotated 90 degrees clockwise, 180 degrees, and 90 degrees counter-clockwise. </p> <p> Next setting up is the custom duration setting. You can set pictures to change on different intervals. (8-60 seconds, and 1-60 minutes) <br/> <br/> The next 4 settings are for the caption. </p> <p> Starting in the bottom left corner: </p> <p> “Caption Location”: You can currently set the caption to display on either the Top or Bottom of the image. <br/> <br/> To the right in the bottom center of the screen: </p> <p> “Caption”: You can type out a custom caption for the photo. There is a 700 character limit. Press enter to save. <br/> <br/> To the right again, in the bottom right of the screen: </p> <p> “Caption Color”: The current color will be shown in a black outlined box. Below that is a green “Set Caption Color” button. Click this to set your color. A popup will slide out with a color picker. A small thumbnail of your current picture will appear next to the color selector. It will draw sample text in the color you choose onto the sample picture, in the location of your choice for Caption Location. To select a color, tap and hold on the color palette. Move your finger around to choose your color. Alternatively, you can manually enter the HEX code for the color. Pressing enter after you type it will apply the color and save. </p> <p> Above Caption Color on the right side: <br/> <br/> “Font Size”: You can set it anywhere from 8pt to 72pt. </p> <p> Transition and Cinematic Mode: <br/> <br/> The 2 options located above the Font Size: </p> <p> <div class=\"helpTitle\">Cinematic Mode</div> <br/> This will show the Cinematic picker explained above in the Picture Add Settings section. </p> <div class=\"helpBack\"> “The cinematic mode picker is set up like the transition picker. The top section has the cinematic effect to add, and a preview button so you can see what it does. Clicking on a selection (other than “None”) will make more options to appear below the cinematic effects. <br/> You can choose which direction the panning of the picture will start on. If you choose random, the direction will also be random. <br/> Once you have made your decision, click the big green OK button.” </div> <p> However, you will not be able to choose “Random” for any setting. </p> <p> There are current 8 modes you can use. They are: <br/> Pan Horizontally Across Center <br/> Pan Horizontally Across Top <br/> Pan Horizontally Across Bottom <br/> Pan Vertically Centered <br/> Pan Vertically On Left <br/> Pan Vertically On Right <br/> Pan Diagonally Top Left to Bottom Right <br/> Pan Diagonally Top Right to Bottom Left <br/> You can choose which direction the pan will start from. Note: Running cinematic mode on a picture with a rotation setting will cause your Touchpad to somewhat lag and be a little un-responsive while a show is running. The show will play fine, but if you try to change settings, the app will lag slightly. Also rotation affects the direction of the pan. It will generally be opposite of what you choose. </p> <p> When this setting is on, the program will enlarge the picture bigger than the screen size, and then pan across it in the chosen direction until it gets to the opposite edge. When it reaches the end, it will turn around and go back the other way. <br/> If you don’t want it to pan, simply choose “None” for the mode. </p> <p> Transition: <br/> This will open the transition picker explained above in the Picture Add Settings. </p> <div class=\"helpBack\"> “Click the blue button to bring up the transition selection popup. The top part is the transition setting. You can set to Random, None, or choose from a variety of transitions. Simply tap on your choice to select it. You can preview them by clicking the magnifying glass icon located on the top right of each item. <br/> Below the transitions is the option to set a speed for the transition. There are 5 different speeds. Slowest = 4.8 seconds, Slow = 4 seconds, Fast = 3 seconds, Faster = 2 seconds, Turbo = .85 seconds. You can also set it to choose a random speed. <br/> Once you have chosen your settings, click the big green OK button to confirm.” </div> <p> However, you will not be able to choose “Random” </p> <p> Any options you change will auto save when they are changed; and also: when you press enter in a text box, when you select a different picture, and when you hit the back button. If you have a larger amount of pictures in your project, and choose to reorder them, the index number won’t save until you press the back button. You must do this for your data to be saved. A notice will alert you if this happens. </p> <p> To delete a single picture, swipe any item in the list of small thumbnails up, and click the delete button that appears. This will only remove the picture from your project, <strong>it won’t</strong> delete it from your Touchpad. </p> <p> When you change settings on each picture, the large center picture will update to let you know about what it will look like when you run the show. </p> <p> To leave the view, click the back arrow on the top left side. </p> <p> Right under to the “Edit Pictures” button, there is an “Edit Music” button. </p> <p> This will bring up the Edit Music screen: <br/> On the left is a list of all the tracks you have added to your project. You can drag and drop to reorder them, or select the index manually on the right side of the screen. Swipe to the right to delete a track from the project. Click the “Play” button to play the track and preview it. </p> <p> Click the back button located in the top left to leave the screen. </p> <p> <div class=\"helpTitle\">Delete All Data</div> </p> <p> To delete either all the pictures, or all the audio, open the application menu, and select the “Delete Data” option, then select either pictures or audio. There is a yes/no confirmation that pops up to be sure you really want to delete everything. This will only delete all information in the file that is currently opened. This WILL NOT delete any actual picture or music files. </p> <p> <div class=\"helpTitle\">Slideshow Settings:</div> </p> <p> On the left side of the main screen are options for the slide show. The icon for the selected option will be shown to the left of each section. </p> <p> The first option is how the pictures are sorted. Click the arrow button on the right to open the drawer and choose your setting. Options are: Picture Random, Picture In Order, Picture Ordered By Filename, Picture Ordered By Path, and Picture Ordered By Full Path. </p> <p> The next item is how you want the music to be sorted. Open the drawer to see the options. Options are Music Random, Music In Order, and No Music. </p> <p> “Random” will sort all the tracks randomly. All tracks will play before repeating. </p> <p> “In Order” will play the tracks according to their index number. </p> <p> “No Audio” will set it to not play audio at all. </p> <p> When the last track or photo is reached, it will start over from the beginning. If you have the random setting on, it will re-randomize them before starting over. </p> <p> Below the picture sort settings is how you want your pictures to switch. Settings are “Duration”, “Song Change”, “Manual”, and “Custom Duration”. </p> <p> “Duration” will change the picture in an interval set by you. Once duration is selected, two options pop up below it. The first box is the number, 8-60 for seconds, 1-60 for minutes. And the second box you can selected seconds or minutes. </p> <p> “Song Change” will switch the picture each time a song ends. </p> <p> “Manual” will not change pictures by itself. Tap on the picture, and two arrow buttons will show up and you can navigate through the show. You can also swipe to the next one or previous one. Both these settings can be turned on and off. </p> <p> “Custom Duration” will change pictures according to their own duration setting. Set this in the Picture settings page. </p> <p> Below the picture switch is the show duration. Options are “Repeat”, “Play Once”, “End With Music”. <br/> Repeat will continually loop the show <br/> Play Once will end the show once the last picture is has reached its duration <br/> End With Music will end the show once the last track has ended. </p> <p> The next two options, located in the “Misc Options” drawer, are to toggle on and off Full Screen mode and Cinematics. <br/> Simply checking Cinematics on will use random Cinematic modes on each picture, and use random transitions. This setting will over-ride the “Over-ride Transition” setting. </p> <p> <div class=\"helpTitle\">Caption Settings:</div> </p> <p> These settings are where you can toggle which captions will be displayed on the picture. <br/> First option is a toggle to show the date and time on the picture. <br/> <br/> To the right of the Data option is a toggle to show the song name on top of the picture. What is displayed is the file name, but formatted to look better. </p> <p> Below those are options for: <br/> Global Caption: This is a caption that will display on every picture. It is displayed in addition to the pictures custom caption. To set it, click the green “Global Caption” button. A popup will slide out. Type out your caption and then click the green “OK” button. </p> <p> To the right of Global Caption is EXIF information: <br/> This will show some information pulled from jpg files. It will only show info if it is not a 0 value or a “normal” value. And not every file will have all the information, or it may not be correct. Usually pictures pulled straight off a camera and not edited will retain the correct information. <br/> Click the green “EXIF Info” button to open a popup to toggle which information that will be displayed. </p> <p> The last caption option is for File Info: <br/> Select which part of the file name you want to display by clicking on the appropriate icon. <br/> File Name: Shows just the file name (ex: “mypicture001.jpg”) <br/> Path: Shows just the path of the file (ex: “/media/internal/pictures/”) <br/> Both: Shows both the path and file name (ex: “/media/internal/pictures/mypicture001.jpg”) <br/> <div class=\"helpTitle\">Over-ride Settings:</div> </p> <p> The next 4 settings are the override options you can toggle on and off. <br/> <br/> The first option is for the transition. Click the blue button to open up the transition popup. It works the same as explained in above sections: </p> <div class=\"helpBack\"> “Click the blue button to bring up the transition selection popup. The top part is the transition setting. You can set to Random, None, or choose from a variety of transitions. Simply tap on your choice to select it. You can preview them by clicking the magnifying glass icon located on the top right of each item. <br/> Below the transitions is the option to set a speed for the transition. There are 5 different speeds. Slowest = 4.8 seconds, Slow = 4 seconds, Fast = 3 seconds, Faster = 2 seconds, Turbo = .85 seconds. You can also set it to choose a random speed. <br/> Once you have chosen your settings, click the big green OK button to confirm.” </div> <p> Turning this option on will apply the chosen transition to all pictures and over-ride each pictures own transition. Changing this while a show is running will not affect pictures immediately. It will take up to 3 picture cycles to kick in. </p> <p> To the right of the transition picker is an option “Stretch All”. This will stretch all pictures to use the full screen size regardless of what individual settings are. You can check and uncheck this when a show is running. This will not affect any pictures while in Cinematic Mode. </p> <p> Below the transition picker is an option for the Font Color: This program will use this color for all captions; regardless as to what each picture has its color set to. To choose a color, click the green “Font Color” button to bring up a popup. Tap and hold on the color pallet, then move your finger around to select a color. You can also manually enter the HEX color code. Click the green “OK” button to confirm. </p> <p> To the right of the Font Color is a setting for the Font Size. To set, click the green “Font Size” button. This will cause a popup to slide out. Select the size you want, and then click the green “OK” button to confirm. This will use 1 font size for all pictures. You can set it to 8pt to 72pt. </p> <p> Changing these settings will not erase any of your custom settings. </p> <p> <div class=\"helpTitle\">Running a show:</div> </p> <p> Once you have all your files added and edited, you can press the blue and green “Play” button. <br/> You can also tap and hold the “Play” button to get a popup menu. The menu will have the options “Start show from last position”, and “Start show from beginning”. Selecting “from last position” will start the show from where you stopped it last. This will only work in non-random shows. <br/> <br/> Tapping on the picture brings up option buttons that overlay on the picture. In the top left, there will be a Pause button. Press this to pause the show. Press again to play. This will pause both the music and photos from continuing. If the Music popup is not showing, a Musical Note button will appear next to the pause button. Press this to show the Music popup. In the bottom right corner there is a button to toggle zoom mode. Clicking this will pause the show if it is running and allow to you pinch-zoom on the picture. Closing the picture will cause the show to start again if it had been running previously. <br/> The next two can be toggled to show up or not. <br/> First is the navigation arrows. If toggled on, two arrow buttons show up. Press the right one to advance in the show, and the left one to go back. <br/> Next is the “Show Menu” button. The menu panel contains the “Stop” button at the top, and then the settings that you can toggle on and off while a show is in progress. <br/> You can toggle the “Show Menu” to show up anytime you tap the screen, or you can have it only show up when the show is paused. (Set in the preferences page) </p> <p> When a show is running, you can also swipe to advance and go back without pressing any buttons. If you want to move ahead in the show, tap on the right side and drag your finger to the left. You have to move about 1/3<sup>rd</sup> of the screen in landscape, and about half in portrait. To go back, start the swipe on the left side of the screen. This can be turned on and off through the preferences page. </p> <p> <div class=\"helpTitle\">Music popup:</div> </p> <p> When the show has music, a popup will show up on the top. (This can be toggled to auto hide on start, in the preferences page). The first button goes back a track. The second button is the pause/play button. And the last button goes to the next track. To the right of the buttons is the current and total track time, and under that is a slider where you can fast forward or go back in a song. To the right of those, is a label that shows the current song playing. All the way on the right is a red X button. Click this to hide the music popup. </p> <p> <div class=\"helpTitle\">Saving, Loading, and New Projects:</div> </p> <p> The program is capable of having multiple saved projects. When you first load up, your project will be titled “Project ####”. Any time you add pictures or music, it will automatically be saved in the currently opened project. Any changes you make will also be automatically saved. If you want to change the name of the project, simply go to the application menu, and select “Save Project As…”. This will load up the save dialog. Just enter a new file name, and press “Save As”. All pictures and music in the file will be saved as the new name, but the project with the old name will be gone. If you choose an already existing name, all information will be added to the existing project, and will not overwrite anything. </p> <p> To start a new project, select “New Project” from the application menu. It will load up a dialog similar to the Save As dialog. Enter a new project name, and click “Make New Project”. This will open up a fresh new project <br/> <br/> To load a project, select “Load Project” from the menu. This will bring up the list of projects you have made. Select the one you want to open, and click “Load”. </p> <p> To delete a project, in any of the dialog views, simple swipe the file all the way to the right, and click delete. You can’t delete the show you have open. </p> <p> The program will automatically load the last show you had open when it starts up. </p> <p> <div class=\"helpTitle\">Preferences and Exhibition</div> </p> <p> The first settings in the Preferences page are the Exhibition settings. There will be a list of all your projects. Simply click the one you want to use for Exhibition, and it will be set. There is a toggle option for it to play music. If this isn’t checked, when played in Exhibition, no music will play, even if your show has music. Note: Full screen does not work in Exhibition. This is a WebOS issue and there is no way around it at this time. Also in Exhibition mode, webOS uses less processing power and Exhibition doesn’t have access to 3d hardware that card mode offers. This will make shows appear somewhat laggy when transitioning or while cinematics are on. Also some transitions do not work, and a similar one will be substituted for it. </p> <p> Below the Exhibition settings are the “General Settings”. There are 6 toggle options you can set. <br/> First is “Show Arrow Buttons”. This will toggle whether or not the Arrow Navigation buttons appear when you tap on the picture when the show is running. <br/> Second is “Auto-hide Audio Popup”. This will toggle whether or not the Music popup will appear when you start your show. <br/> Next is “Hide Open Menu Button Unless Paused”. This will toggle whether the “Open Menu” button will show up when you tap on the picture when a show is running. If toggled on, the button will only show up when the show is paused. <br/> Fourth is “Enable Swipe to Change Picture”. This will turn on or off the ability to swipe to advance or go back while a show is running. <br/> Fifth is “Auto-start From Last Position”. This will toggle whether or not the show starts from the beginning every time, or from the place you last stopped it. Note: This only works for non-random shows. <br/> And Last is “Always Load Blank Project”. With this toggled on, when you launch the app, it will load up a blank new project. If off, it will load the last project you had open. </p>"

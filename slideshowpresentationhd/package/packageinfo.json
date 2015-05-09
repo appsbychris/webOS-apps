@@ -1,0 +1,10 @@
+{
+  "id": "com.chrisvanhooser.slideshowpresentationhd",
+  "package_format_version": 2,
+  "loc_name": "Slideshow Presentation HD",
+  "version": "2.0.2",
+  "icon": "icon.png",
+  "vendor": "Apps by Chris",
+  "app": "com.chrisvanhooser.slideshowpresentationhd",
+  "services": ["com.chrisvanhooser.slideshowpresentationhd.service"]
+}
